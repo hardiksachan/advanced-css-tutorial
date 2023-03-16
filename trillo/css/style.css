@@ -36,6 +36,9 @@ body {
   color: #777777;
   min-height: 100vh; }
 
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
 .btn-inline {
   border: none;
   color: #eb2f64;
@@ -68,6 +71,29 @@ body {
   .gallery__photo {
     width: 100%;
     display: block; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: 1px solid #f4f2f2;
+  border-bottom: 1px solid #f4f2f2;
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: .7rem;
+    background-color: #eb2f64;
+    -webkit-mask-image: url("../img/chevron-thin-right.svg");
+    -webkit-mask-size: cover;
+    mask-image: url("../img/chevron-thin-right.svg");
+    mask-size: cover; }
 
 .logo {
   height: 3.25rem;
@@ -113,6 +139,22 @@ body {
   .overview__rating-count {
     font-size: .8rem;
     text-transform: uppercase; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: #999999;
+  display: flex;
+  align-items: center; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #FFFFFF; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem; }
 
 .search {
   flex: 0 0 40%;
@@ -242,7 +284,24 @@ body {
   align-items: center; }
 
 .hotel-view {
-  height: 80rem;
+  flex: 1; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: #f4f2f2;
+  border-bottom: 1px solid #f4f2f2; }
+
+.description {
+  background-color: #FFFFFF;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  font-size: 1.4rem; }
+
+.user-reviews {
+  background-color: greenyellow;
   flex: 1; }
 
 .sidebar {
@@ -253,9 +312,8 @@ body {
   justify-content: space-between; }
 
 .container {
-  background-color: #f4f2f2;
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  min-height: 50rem; }
+  background-color: #faf9f9;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
 
 .content {
   display: flex; }
